@@ -35,8 +35,6 @@ export async function getAllMeals() {
       return compare(dateA, dateB);
     });
 
-    console.log(meals);
-
     return meals;
   } catch (error) {
     throw error;
