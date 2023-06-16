@@ -19,11 +19,9 @@ export function MealProvider({ children }: MealProviderProps) {
 
   const relatory = useRelatory(meals);
 
-  console.log("relatory", relatory);
-
   async function getMeals() {
     const meals = await getAllMeals();
-    console.log(meals);
+
     setMeals(meals);
   }
   useEffect(() => {
