@@ -11,10 +11,10 @@ function changeFormatData(data: string): string {
 
 function compare(dateA: number, dateB: number) {
   if (dateA - dateB < 0) {
-    return -1;
+    return 1;
   }
   if (dateA - dateB > 0) {
-    return 1;
+    return -1;
   }
   return 0;
 }
@@ -26,13 +26,12 @@ export async function getAllMeals() {
     const meals: MealDTO[] = storage ? JSON.parse(storage) : [];
 
     meals.sort((a, b) => {
-      console.log(a.date, b.date);
       let dateAFormated: string = changeFormatData(a.date);
       let dateBFormated: string = changeFormatData(b.date);
-      console.log(dateAFormated, dateBFormated);
+
       let dateA = new Date(dateAFormated).getTime();
       let dateB = new Date(dateBFormated).getTime();
-      console.log(dateA, dateB);
+
       return compare(dateA, dateB);
     });
 
