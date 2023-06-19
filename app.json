@@ -1,28 +1,36 @@
 {
   "expo": {
     "name": "my-app",
-    "slug": "my-app",
+    "slug": "daily-diet",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": ".src/assets/logo.png",
+    "icon": "src/assets/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": ".src/assets/logo.png",
+      "image": "src/assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.joaop5142.dailydiet"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": ".src/assets/logo.png",
+        "foregroundImage": "src/assets/logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.joaop5142.dailydiet"
     },
     "web": {
-      "favicon": ".src/assets/logo.png"
-    }
+      "favicon": "src/assets/logo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1b6a80b6-df0a-415b-9304-0195ce944d33"
+      }
+    },
+    "owner": "joaop5142"
   }
 }
